@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/cardview_dark_background">
+    <!--     android:background="@color/cardview_dark_background - colocar um fundo mais escuro pra aparecer mais o card -->
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrofit GridView JSON"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textStyle="bold"/> <!--deixar em negrito -->
+    <!--match_parente: altura ou largura total
+     wrap_content: só vai usar o que precisa de espaço-->
+
+    <!--circulozinho de carregamento -->
+    <ProgressBar
+        android:id="@+id/myProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="gone"/>
+        <!-- android:indeterminate="true" - ficar rodando indeterminadamente enquanto outra ação não acontecer
+        android:visibility="gone" - visibilidade inicial = nada -->
+
+    <GridView
+        android:id="@+id/dogGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"/>
+    <!-- android:numColumns="auto_fit": numero de colonas vai se ajusatr de acordo com a quantidade de itens
+      android:verticalSpacing="10dp"          android:horizontalSpacing="10dp - dar espaço entre os cards-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:backgroundTint="@color/white"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_margin="10dp"/>
+
+
+</LinearLayout>

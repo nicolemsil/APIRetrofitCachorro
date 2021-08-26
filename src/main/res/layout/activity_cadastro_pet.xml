@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CadastroPetActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastro do Pet"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tvNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18dp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/tvRaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Raça"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18dp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/edtRaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/tvImagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="URL Imagem"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18dp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/edtImagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btnConsultarNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Consultar por nome"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btnInserir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Inserir"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Em Java Object"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvObjetoJava"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/black"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Em Json"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvJson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+
+
+
+
+
+
+
+</LinearLayout>
