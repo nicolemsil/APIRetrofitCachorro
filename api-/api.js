@@ -1,80 +1,46 @@
-﻿var express = require('express');
+﻿    var express = require('express');
     var app = express();
     var cors = require('cors');
     var bodyParser = require('body-parser');
-
-
-
-    data = [  
-	{  
-		"nome":"Pipoca",        		
-        "image":"https://i.pinimg.com/originals/b2/21/5c/b2215c404b08d0f0905d693ca55d1708.jpg",        
-		"raca":"York Shire"
-   	},
-   	{  
-        "nome":"Rick",
-      	"image":"https://upload.wikimedia.org/wikipedia/commons/2/27/2._DSC_0346_%2810096362833%292.jpg",
-      	"raca":"Pastor Alemão"
-   	},
-   	{  
-        "nome":"Lexy",
-		"image":"https://www.universodoaquario.com.br/image/cache/catalog/filhotes/cao-raca-maltes-900x900.jpeg",
-		"raca":"Maltês"
-   	},
-   	{  
-        "nome":"Gigi",
-	    "image":"https://i.pinimg.com/originals/4e/e6/d5/4ee6d5eb4079c9db7dc17074d3073c23.jpg",
-  		"raca":"Schnowser"
-	},   	
-	];
 
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cors());
 
-    app.get('/api/dog/get', function (req, res) {
+    app.get('/api/monitor/get', function (req, res) {
         setTimeout(function(){
         res.header('Access-Control-Allow-Origin', '*')
         .send(200,                    
 	[  
 	{  
-		"nome":"Pipoca",        		
-        "image":"https://i.pinimg.com/originals/b2/21/5c/b2215c404b08d0f0905d693ca55d1708.jpg",        
-		"raca":"York Shire"
+		"nome":"Gabriel Alves",        		
+        "image":"https://image.freepik.com/vetores-gratis/vector-avatar-sorrindo-homem-expressao-facial_102172-203.jpg",
+		"horario":"Seg - 7h30 às 8h20"
    	},
    	{  
-        "nome":"Rick",
-      	"image":"https://upload.wikimedia.org/wikipedia/commons/2/27/2._DSC_0346_%2810096362833%292.jpg",
-      	"raca":"Pastor Alemão"
+        "nome":"Nicolas Duarte",
+      	"image":"https://image.freepik.com/vetores-gratis/homem-jovem-avatar-personagem-vector-ilustracao-design_24877-18550.jpg",
+      	"horario":"Ter - 13h às 13h50"
    	},
    	{  
-        "nome":"Lexy",
-		"image":"https://www.universodoaquario.com.br/image/cache/catalog/filhotes/cao-raca-maltes-900x900.jpeg",
-		"raca":"Maltês"
+        "nome":"Nouani",
+	"image":"https://thumbs.dreamstime.com/b/o-homem-feliz-farpado-mostra-polegar-acima-gesto-fresco-124097791.jpg",
+	"horario":"Qua - 18h15 às 19h00"
    	},
    	{  
-        "nome":"Gigi",
-	    "image":"https://i.pinimg.com/originals/4e/e6/d5/4ee6d5eb4079c9db7dc17074d3073c23.jpg",
-  		"raca":"Schnowser"
+        "nome":"Rafael Belinelli",
+	"image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkFE0vM7yFk918psCnju8_g7wjLJShngwb1zfpwOOQ1wAgWalATUydjVYeSWIGvs6euuY&usqp=CAU",
+  	"horario":"Qui - 17h25 às 18h15"
+	},
+	{  
+        "nome":"Ricardo",
+	"image":"https://thumbs.dreamstime.com/b/homem-de-cabelos-longos-avatar-rosto-humano-belo-desenho-personalizado-animado-masculino-cabe%C3%A7a-personagem-182214072.jpg",
+  	"horario":"Sex - 20h20 às 21h10"
 	},   	
 	]
     )
     }, 3000);
-    });
-
-
-    app.get('/api/dog/getNome/:nome', (req, res) => {
-        const nome = req.params.nome;
-        const item = data.find(item => item.nome == nome);
-        return res.json(item);
-    });
-
-    app.post('/api/dog/post', (req, res) => {        
-        const nome = req.body.nome;
-        const raca = req.body.raca;        
-        const image = req.body.image;
-        return res.json({nome,raca,image});
     });
   
 
